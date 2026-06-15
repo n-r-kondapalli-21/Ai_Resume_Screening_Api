@@ -9,10 +9,7 @@ uploads/
 .vscode/
 .idea/
 
-Ai_models/
-*.bin
-*.pt
-*.pth
+
 
 test/
 tests/

@@ -26,6 +26,10 @@ UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR,exist_ok=True)
 logger = logging.getLogger(__name__)
 
+@app.get("/home")
+def greet():
+    return {"message":"Welcome to the Ai Resume Screening Api"}
+
 @app.post("/resume-match")
 async def resume_match(
     file: UploadFile = File(...),
@@ -104,3 +108,6 @@ async def resume_match(
     finally:
         if temp_path and os.path.exists(temp_path):
             os.remove(temp_path)
+
+
+            
