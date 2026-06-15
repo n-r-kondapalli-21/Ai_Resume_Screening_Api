@@ -10,16 +10,9 @@ def generate_embedding(text):
     return embedding
 
 
-
 if __name__=="__main__":
+    text = "hello to all"
 
-    text="hello to all"
+    emb=generate_embedding(text)
 
-    embedding = generate_embedding(text)
-
-    print(type(embedding))
-    print(embedding.shape)
-
-
-
-
+    print(len(emb))
